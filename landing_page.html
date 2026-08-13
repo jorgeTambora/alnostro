@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Video Pipeline (SVP) - Automate Your Content</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Scoped to a container to avoid messing up WordPress theme */
+        .svp-landing {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #E2E8F0;
+            background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            margin: 2rem 0;
+            line-height: 1.6;
+        }
+
+        .svp-hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
+        }
+
+        .svp-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(99, 102, 241, 0.2);
+            color: #818CF8;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .svp-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #F8FAFC;
+            margin: 0 0 1rem 0;
+            line-height: 1.2;
+        }
+
+        .svp-title span {
+            background: linear-gradient(to right, #818CF8, #C084FC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .svp-subtitle {
+            font-size: 1.125rem;
+            color: #94A3B8;
+            max-width: 600px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .svp-mockup-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.1);
+            transform: translateY(0);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .svp-mockup-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.2);
+        }
+
+        .svp-mockup-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .svp-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 3rem 2rem;
+            background: rgba(15, 23, 42, 0.4);
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .svp-feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: background 0.2s ease;
+        }
+
+        .svp-feature-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .svp-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .svp-feature-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #F8FAFC;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .svp-feature-text {
+            font-size: 0.95rem;
+            color: #94A3B8;
+            margin: 0;
+        }
+
+        .svp-footer {
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            background: rgba(15, 23, 42, 0.6);
+        }
+
+        .svp-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .svp-links a {
+            color: #818CF8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .svp-links a:hover {
+            color: #C084FC;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .svp-title { font-size: 2rem; }
+            .svp-hero { padding: 3rem 1.5rem; }
+            .svp-features { padding: 2rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="svp-landing">
+    <!-- Hero Section -->
+    <div class="svp-hero">
+        <div class="svp-badge">Creator Tools</div>
+        <h1 class="svp-title">Social Video Pipeline <span>(SVP)</span></h1>
+        <p class="svp-subtitle">
+            The ultimate desktop pipeline for automating video transcription, dynamic portrait cropping with face/object tracking, and scheduling directly to your favorite social feeds.
+        </p>
+        
+        <!-- Mockup Image -->
+        <div class="svp-mockup-container">
+            <!-- IMPORTANT: Replace the src below with the URL of the image you upload to your WordPress Media Library -->
+            <img src="Al-nostro-svp.jpg" alt="SVP Application Interface showing video cropping and scheduling">
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="svp-features">
+        <div class="svp-feature-card">
+            <div class="svp-icon">✂️</div>
+            <h3 class="svp-feature-title">Smart 9:16 Cropping</h3>
+            <p class="svp-feature-text">Automatically track speakers or custom objects (like instruments) to generate perfectly framed portrait cuts for Shorts, Reels, and TikTok.</p>
+        </div>
+        <div class="svp-feature-card">
+            <div class="svp-icon">⏱️</div>
+            <h3 class="svp-feature-title">Direct Scheduling</h3>
+            <p class="svp-feature-text">Connect your YouTube, TikTok, Meta, and X accounts securely. Schedule your processed clips to auto-publish without leaving the app.</p>
+        </div>
+        <div class="svp-feature-card">
+            <div class="svp-icon">🔒</div>
+            <h3 class="svp-feature-title">Local & Secure</h3>
+            <p class="svp-feature-text">SVP runs locally on your machine. Your credentials and videos never touch a central server, ensuring absolute privacy and security.</p>
+        </div>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="svp-footer">
+        <div class="svp-links">
+            <!-- IMPORTANT: Update these links to point to the actual URLs on your site once created -->
+            <a href="privacy_policy.html">Privacy Policy</a>
+            <a href="terms_of_service.html">Terms of Service</a>
+            <a href="mailto:info@alnostro.com">Support</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
