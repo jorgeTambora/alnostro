@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Guide - Al Nostro Social Video Pipeline (SVP)</title>
+    <meta name="description" content="Step-by-step guide on how to set up and use Al Nostro Social Video Pipeline (SVP).">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Shared Styles matching homepage */
+        .hero {
+            padding: 4rem 0 2rem;
+            text-align: center;
+            position: relative;
+        }
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        .hero-title span {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .guide-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+            text-align: left;
+        }
+        
+        .guide-container h2 {
+            font-size: 2rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 0.5rem;
+        }
+        
+        .guide-container h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #fff;
+        }
+        
+        .guide-container p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .guide-container ul, .guide-container ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        .guide-container li {
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+        
+        .guide-container strong {
+            color: #fff;
+        }
+
+        .step-box {
+            background: rgba(0, 0, 0, 0.2);
+            border-left: 4px solid var(--accent-primary);
+            padding: 1rem 1.5rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">Al Nostro Social Video Pipeline (SVP)</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="user_guide.html" class="active">User Guide</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="contact.html" class="nav-cta">Get Started</a>
+    </nav>
+
+    <main>
+        <div class="bg-glow"></div>
+        <div class="bg-glow-right"></div>
+        
+        <div class="container">
+            <section class="hero animate-up">
+                <img src="Al%20Nostro%20Logo%20Design.png" alt="Al Nostro Logo" style="display: block; margin: 0 auto 1.5rem auto; max-width: 200px; height: auto;">
+                <h1 class="hero-title">SVP <span>User Guide</span></h1>
+            </section>
+            
+            <div class="guide-container animate-up delay-1">
+                <p>Welcome to the Al Nostro Social Video Pipeline (SVP) User Guide. This manual provides step-by-step instructions on how to set up, configure, and operate every feature within the application.</p>
+
+                <h2>1. Initial Configuration & Workflow</h2>
+                <p>The core of SVP relies on actively watching a folder on your computer for new videos and processing them.</p>
+                
+                <h3>Setting up the Watch Folder</h3>
+                <div class="step-box">
+                    <ol>
+                        <li>Open the main SVP application window and click on the <strong>Settings</strong> button.</li>
+                        <li>In the <strong>General</strong> section, find the <strong>Watch folder</strong> field.</li>
+                        <li>Click <strong>Browse...</strong> and select a folder on your local drive (e.g., <code>C:\Users\You\Videos\To Process</code>).</li>
+                        <li>Click <strong>Save</strong>. SVP will now monitor this folder. Whenever you drop an <code>.mp4</code> or <code>.mov</code> file into this folder, it will automatically enter the processing pipeline.</li>
+                    </ol>
+                </div>
+
+                <h3>Setting the Time Zone</h3>
+                <div class="step-box">
+                    <ol>
+                        <li>In the <strong>Settings &gt; General</strong> section, locate the <strong>Time zone</strong> dropdown.</li>
+                        <li>Select your local timezone (e.g., <code>America/New_York</code>). This ensures your scheduled uploads align perfectly with your local time.</li>
+                    </ol>
+                </div>
+
+                <h3>Content Modes (Podcast vs Music)</h3>
+                <div class="step-box">
+                    <ol>
+                        <li>In <strong>Settings &gt; General</strong>, select the radio button for either <strong>Podcast mode</strong> or <strong>Music mode</strong>.</li>
+                        <li><strong>Podcast Mode:</strong> Use this for spoken word content. It automatically enables AI transcription and dynamic SEO generation based on the dialogue.</li>
+                        <li><strong>Music Mode:</strong> Use this for non-verbal or music videos. It turns off transcription (preventing AI hallucinations) and relies on your manual SEO configuration.</li>
+                    </ol>
+                </div>
+
+                <h2>2. AI Providers (Gemini & ChatGPT)</h2>
+                <p>SVP uses AI to intelligently analyze transcripts and generate rich SEO titles, descriptions, and tags. You must provide API keys for these services to enable automatic generation.</p>
+                <div class="step-box">
+                    <ol>
+                        <li><strong>Google Gemini:</strong> Go to Google AI Studio (<a href="https://aistudio.google.com/app/apikey" target="_blank" style="color:var(--accent-primary)">aistudio.google.com</a>) and create a free API Key.</li>
+                        <li><strong>OpenAI (ChatGPT):</strong> Go to the OpenAI Developer Platform (<a href="https://platform.openai.com/api-keys" target="_blank" style="color:var(--accent-primary)">platform.openai.com</a>) and generate a new secret API key.</li>
+                        <li>In SVP, click on the <strong>Secrets/API Keys status bar</strong> at the bottom of the main window.</li>
+                        <li>Paste your generated API keys into their respective fields and click Save.</li>
+                    </ol>
+                </div>
+
+                <h2>3. Social Platform Connections (OAuth)</h2>
+                <p>Before SVP can schedule posts, you must link your social media accounts.</p>
+
+                <h3>Connecting YouTube</h3>
+                <p>Most users can simply sign in via OAuth. However, if you are bringing your own YouTube API credentials, you must first create a project in the Google Cloud Console.</p>
+                <div class="step-box">
+                    <ol>
+                        <li><strong>BYOK - Bring Your Own Key (Required):</strong> Go to the <a href="https://console.cloud.google.com/" target="_blank" style="color:var(--accent-primary)">Google Cloud Console</a>, create a project, and enable the <strong>YouTube Data API v3</strong>. Generate OAuth Client ID credentials and configure them in SVP.</li>
+                        <li>Open the main SVP application and click <strong>Accounts</strong> on the left sidebar.</li>
+                        <li>Click the <strong>YouTube</strong> button.</li>
+                        <li>Click <strong>Connect YouTube Channel</strong>. Your web browser will open.</li>
+                        <li>Sign in with your Google account and grant SVP permission to manage your YouTube videos.</li>
+                        <li>Return to the app and configure your defaults: set your desired <strong>Privacy Status</strong> (Public, Unlisted, Private) and default <strong>Category</strong>.</li>
+                    </ol>
+                </div>
+
+                <h3>Connecting TikTok</h3>
+                <div class="step-box">
+                    <ol>
+                        <li>Under <strong>Accounts</strong>, click the <strong>TikTok</strong> button.</li>
+                        <li>Click <strong>Sign in with TikTok</strong>.</li>
+                        <li>Authorize the app in your browser window. Once successful, SVP will pull in your TikTok profile and be ready for uploads.</li>
+                    </ol>
+                </div>
+
+                <h3>Connecting Meta (Facebook & Instagram)</h3>
+                <div class="step-box">
+                    <ol>
+                        <li>Under <strong>Accounts</strong>, click the <strong>Meta</strong> button.</li>
+                        <li>Click <strong>Connect Meta Account</strong>.</li>
+                        <li>Log in to Facebook. You must grant access to the Facebook Pages and Instagram Professional accounts you wish to manage.</li>
+                        <li>Once connected, use the UI dropdowns in SVP to select which specific Page and Instagram account should receive the uploads.</li>
+                    </ol>
+                </div>
+
+                <h3>Connecting X (Twitter)</h3>
+                <p>Due to strict API rate limits on X, you must supply your own Developer App keys (Bring Your Own Key).</p>
+                <div class="step-box">
+                    <ol>
+                        <li>Go to the <a href="https://developer.x.com/en/portal/dashboard" target="_blank" style="color:var(--accent-primary)">X Developer Portal</a> and create a Free or Basic Project/App. (Read the <a href="https://developer.x.com/en/docs/apps/overview" target="_blank" style="color:var(--accent-primary)">App Documentation</a> for help).</li>
+                        <li>Under your App settings, generate your <strong>Consumer Keys (API Key and API Secret)</strong>. Ensure your app has "Read and Write" permissions.</li>
+                        <li>In SVP, under <strong>Accounts &gt; X</strong>, paste your <strong>API Key</strong> and <strong>API Key Secret</strong> into the respective fields.</li>
+                        <li>Click <strong>Sign in with X</strong>. A browser window will open for you to authorize your account.</li>
+                        <li>Upon success, return to SVP and click <strong>Save</strong>.</li>
+                    </ol>
+                </div>
+
+                <h2>4. Automated Editing & Processing Features</h2>
+                <p>SVP can intelligently edit your footage. Set these features up in <strong>Settings &gt; Features</strong> and <strong>Settings &gt; Editing</strong>.</p>
+
+                <h3>Auto-generate 9:16 Cuts (Portrait Tracking)</h3>
+                <p>This converts 16:9 videos into tracked 9:16 Shorts/Reels.</p>
+                <div class="step-box">
+                    <ol>
+                        <li>In <strong>Settings &gt; Features</strong>, check the box for <strong>Auto-generate 9:16 cuts</strong>.</li>
+                        <li>Set the <strong>Length</strong> (e.g., 60 seconds). SVP will chop long videos into multiple 60-second vertical clips.</li>
+                    </ol>
+                </div>
+                
+                <h3>Switched Camera Cuts</h3>
+                <p>If you record your content with multiple camera angles stored in the same frame (or if you want to define dynamic zoom regions), you can use Switched Camera Cuts to automatically bounce between angles.</p>
+                <div class="step-box">
+                    <ol>
+                        <li>In <strong>Settings &gt; Features</strong>, check the box for <strong>Switched Camera Cuts</strong>.</li>
+                        <li>Click <strong>Configure...</strong> to open the Camera Switch designer.</li>
+                        <li>You can define profiles that represent your camera setup. For example, if you have a wide shot, a close-up on speaker A, and a close-up on speaker B all baked into a 4K canvas, define those sub-regions here.</li>
+                        <li>Save your profile and select it from the dropdown in the settings panel. SVP will now auto-switch angles dynamically based on the audio and transcription!</li>
+                    </ol>
+                </div>
+
+                <h3>Removing Silences</h3>
+                <p>Cut out dead air automatically to make videos more engaging.</p>
+                <div class="step-box">
+                    <ol>
+                        <li>In <strong>Settings &gt; Editing</strong>, check <strong>Remove silences</strong>.</li>
+                        <li><strong>Silence threshold (dB):</strong> Set this to match your background noise. E.g., <code>-35.0</code> dB. Anything quieter than this is considered silence.</li>
+                        <li><strong>Min silence duration (s):</strong> E.g., <code>0.35</code>. A pause must be at least this long to be cut out.</li>
+                        <li><strong>Padding (s):</strong> E.g., <code>0.08</code>. Adds a tiny buffer around the cut so speech doesn't sound clipped.</li>
+                    </ol>
+                </div>
+
+                <h3>Mute Words (Word Filters)</h3>
+                <p>Automatically bleep/mute profanity or specific brand-unsafe words.</p>
+                <div class="step-box">
+                    <ol>
+                        <li>In <strong>Settings &gt; Editing</strong>, click <strong>Word Filters...</strong>.</li>
+                        <li>Check the <strong>Enable Word Filter</strong> box at the top.</li>
+                        <li>Type a word in the text box and press Enter (or click Add).</li>
+                        <li>Choose a replacement mode (e.g., <em>Mute audio</em>). SVP will analyze the transcription and silence those timestamps automatically. Click Save.</li>
+                    </ol>
+                </div>
+
+                <h2>5. Branding, Visuals & Overlays</h2>
+                
+                <h3>Branding Panels (Landscape & Portrait)</h3>
+                <p>SVP lets you design and burn-in graphical elements onto your videos. You can set up completely different branding designs depending on whether the output is Landscape (16:9) or Portrait (9:16).</p>
+                <div class="step-box">
+                    <ol>
+                        <li>In the main SVP window, find the <strong>Branding (Landscape)</strong> or <strong>Branding (Portrait)</strong> buttons.</li>
+                        <li>Inside the editor, you can add text elements (like your social handles) or progress bars to keep viewers engaged.</li>
+                        <li>Position the elements on the canvas preview to exactly where you want them to appear on the final video.</li>
+                        <li>SVP will automatically apply the Landscape branding to standard videos, and the Portrait branding to any generated Shorts/Reels.</li>
+                    </ol>
+                </div>
+
+                <h3>Overlay Menu</h3>
+                <p>The Overlay Menu allows you to inject image (PNG/JPG) or video (MP4/MOV) overlays directly into your processed footage.</p>
+                <div class="step-box">
+                    <ol>
+                        <li>Open the <strong>Overlay Menu</strong> from the main dashboard.</li>
+                        <li>Click <strong>Add Overlay</strong> and choose an image or a video file (with transparency/alpha channel if desired).</li>
+                        <li>Adjust the <strong>Scale</strong> and <strong>Position</strong> (X/Y coordinates) to place it on the screen (e.g., a logo watermark in the top right corner, or a transparent animated lower-third).</li>
+                        <li>Set the opacity and exactly when the overlay should appear/disappear on the timeline.</li>
+                    </ol>
+                </div>
+
+                <h2>6. Scheduling, Queues, & Job Management</h2>
+
+                <h3>Queue Overview & Actions</h3>
+                <p>The Queue is the command center where you manage and track every video job. From the Queue toolbar, you have access to several powerful management features:</p>
+                <div class="step-box">
+                    <ul>
+                        <li><strong>Create Jobs:</strong> Manually enqueue a video file for processing, bypassing the automatic watch folder.</li>
+                        <li><strong>Export CSV / Import CSV:</strong> Similar to publishing slots, you can export your entire queue of jobs to a spreadsheet, manipulate metadata or scheduling dates in bulk, and import them back into SVP.</li>
+                        <li><strong>Run All:</strong> Immediately kicks off processing for all jobs currently in the "Pending" state.</li>
+                        <li><strong>Clear Queue:</strong> Removes all pending, unprocessed jobs from the queue.</li>
+                        <li><strong>Clear Active:</strong> Aborts and removes jobs that are currently in the "Processing" state.</li>
+                        <li><strong>Delete History:</strong> Cleans up your view by removing all successfully completed jobs from the database history.</li>
+                    </ul>
+                </div>
+
+                <h3>Handling Failed Jobs</h3>
+                <p>Sometimes APIs timeout or a video file is corrupted. The queue provides tools to handle these failures gracefully.</p>
+                <div class="step-box">
+                    <ul>
+                        <li><strong>Viewing Failure Reasons:</strong> If a job fails, it will be moved to the <em>Failed</em> state. You can click on the failed job to view the exact stack trace and error log explaining why it failed (e.g., "YouTube API Rate Limit Exceeded").</li>
+                        <li><strong>ReRunning Failed Jobs:</strong> Instead of starting entirely from scratch, you can click the <strong>Retry</strong> button on a failed job. SVP is smart enough to pick up exactly where it left off, avoiding redundant rendering or tracking.</li>
+                    </ul>
+                </div>
+
+                <h3>Publishing Slots</h3>
+                <p>Instead of manually picking dates and times for every upload, you can define your ideal weekly "Publishing Slots". SVP will automatically place newly processed videos into the next available slot!</p>
+                <div class="step-box">
+                    <ol>
+                        <li>Click <strong>Publishing Slots</strong> in the main app.</li>
+                        <li>Select a platform (e.g., YouTube) and define your weekly schedule (e.g., Mondays at 9:00 AM, Wednesdays at 5:00 PM).</li>
+                        <li>Click <strong>Add Slot</strong> for each desired time.</li>
+                        <li><strong>Bulk Import/Export:</strong> If you manage multiple accounts or environments, you can click <strong>Export</strong> to save your entire slot schedule to a CSV file. You can edit this file in Excel and <strong>Import</strong> it back into SVP to rapidly set up hundreds of slots!</li>
+                    </ol>
+                </div>
+
+                <h3>YouTube Rescheduler</h3>
+                <p>Sometimes you need to shift your entire content calendar. The YT Rescheduler lets you manage videos that are already scheduled natively on YouTube.</p>
+                <div class="step-box">
+                    <ol>
+                        <li>Click the <strong>YT Rescheduler</strong> tool.</li>
+                        <li>Click <strong>Refresh from YouTube</strong>. This securely syncs down all videos currently sitting in your channel's "Scheduled" state.</li>
+                        <li>Select one or more videos in the list to shift their scheduled publish dates using the drag-and-drop or calendar tools.</li>
+                        <li><strong>CSV Import/Export:</strong> To manage large scheduling calendars offline, click <strong>Export CSV</strong>. This will generate a spreadsheet of all your scheduled videos and their current dates. You can edit the dates directly in Excel or Google Sheets, then click <strong>Import CSV</strong> to load your modified spreadsheet back into SVP.</li>
+                        <li><strong>Staging Queue:</strong> Whether you modify dates via the UI or by importing a CSV, your changes are first placed into a <strong>Staging Queue</strong>. This acts as a safety buffer, allowing you to review all pending date changes before they go live.</li>
+                        <li>Once you are satisfied with the pending changes in the Staging Queue, click <strong>Apply Changes</strong> to sync the new dates back to YouTube.</li>
+                    </ol>
+                </div>
+
+                <h2>7. Cloud Backups & Auto-Purge Maintenance</h2>
+                
+                <h3>Setting up Google Drive Cloud Backups</h3>
+                <div class="step-box">
+                    <ol>
+                        <li>In <strong>Settings &gt; General</strong>, check <strong>Enable Backup (Google Drive)</strong>.</li>
+                        <li>Click <strong>Configure...</strong>.</li>
+                        <li>In the backup dialog, click <strong>Sign in with Google</strong>.</li>
+                        <li>Authorize SVP in your web browser. SVP will now securely upload your database and configurations to Google Drive every night.</li>
+                        <li>You can also click <strong>Backup Now</strong> to manually push a backup, or <strong>Restore...</strong> to recover settings from a new computer.</li>
+                    </ol>
+                </div>
+
+                <h3>Configuring Auto-Purge</h3>
+                <p>Keep your hard drive clean by deleting old videos.</p>
+                <div class="step-box">
+                    <ol>
+                        <li>In <strong>Settings &gt; Features</strong>, check the <strong>Auto-purge</strong> box.</li>
+                        <li>Click <strong>Configure...</strong>.</li>
+                        <li><strong>Processed folder retention:</strong> How long to keep original files after processing (Default: 30 days).</li>
+                        <li><strong>Output folder retention:</strong> How long to keep generated clips after they successfully upload (Default: 30 days).</li>
+                        <li>(Optional) Add a custom folder path to purge arbitrary folders based on file modification date. Click Save.</li>
+                    </ol>
+                </div>
+
+                <h2>8. Notifications & Manual Overrides</h2>
+
+                <h3>Email Notifications</h3>
+                <div class="step-box">
+                    <ol>
+                        <li>In <strong>Settings &gt; General</strong>, check the <strong>Notifications</strong> box.</li>
+                        <li>Click <strong>Configure...</strong>.</li>
+                        <li>Enter your SMTP server details (e.g., <code>smtp.gmail.com</code>), port (<code>587</code> for TLS), your email, and app password.</li>
+                        <li>Enter the destination email address in the <strong>To Address</strong> field.</li>
+                        <li>Check the events you want to be notified about (e.g., <em>Notify on Job Failure</em>).</li>
+                        <li>Click <strong>Send Test Email</strong> to verify your setup, then click <strong>Save</strong>.</li>
+                    </ol>
+                </div>
+
+                <h3>Manual Tags</h3>
+                <div class="step-box">
+                    <ol>
+                        <li>In <strong>Settings &gt; General</strong>, check <strong>Manual Tags</strong>.</li>
+                        <li>Click <strong>Configure...</strong>.</li>
+                        <li>Add your preferred hashtags (e.g., <code>#Music</code>, <code>#LiveSession</code>) to the list.</li>
+                        <li>When enabled, SVP will use this exact list for SEO outputs instead of relying on the AI to generate dynamic tags from the transcription.</li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Al Nostro Social Video Pipeline (SVP)</h3>
+                <p>Empowering creators to scale their content effortlessly with intelligent, local-first automation.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="terms_of_service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Al Nostro Social Video Pipeline. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
