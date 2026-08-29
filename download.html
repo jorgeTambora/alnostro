@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download - Al Nostro Social Video Pipeline (SVP)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .download-container {
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 3rem;
+            border-radius: 24px;
+            border: 1px solid var(--border-glass);
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .page-header {
+            padding: 2rem 0 1rem;
+        }
+        .btn-download {
+            background: #10B981;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+        .version-info {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">Al Nostro Social Video Pipeline (SVP)</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="user_guide.html">User Guide</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="subscribe.html" class="nav-cta">Get Started</a>
+    </nav>
+
+    <main>
+        <div class="bg-glow"></div>
+        <div class="container">
+            <div class="page-header animate-up">
+                <img src="Al%20Nostro%20Logo%20Design.png" alt="Al Nostro Logo" style="display: block; margin: 0 auto 1.5rem auto; max-width: 200px; height: auto;">
+                <h1 class="page-title">Download <span>SVP Pro</span></h1>
+                <p class="page-subtitle">Get the latest version of the Al Nostro Social Video Pipeline desktop application.</p>
+            </div>
+            
+            <div class="download-container animate-up delay-1">
+                <h2>Windows Installer</h2>
+                <p style="color: var(--text-secondary); margin: 1rem 0 2rem 0; line-height: 1.6;">
+                    The setup executable includes everything you need. No additional dependencies or Python installation required. Just run the installer and you're good to go!
+                </p>
+                <a href="SVP_Setup.exe" class="btn-download" download>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download SVP_Setup.exe
+                </a>
+                <div class="version-info">
+                    Requires Windows 10/11 (64-bit)
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
