@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe - Al Nostro Social Video Pipeline (SVP)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .pricing-container {
+            max-width: 900px;
+            margin: 0 auto 2rem auto;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 3rem;
+            border-radius: 24px;
+            border: 1px solid var(--border-glass);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            text-align: left;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            .pricing-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .page-header {
+            padding: 2rem 0 1rem;
+        }
+        .price {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .price span {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .trial-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.15);
+            color: #10B981;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        .features-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-secondary);
+        }
+        .features-list li::before {
+            content: "✓";
+            color: #10B981;
+            font-weight: bold;
+        }
+        .payment-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 0;
+        }
+        .btn-stripe {
+            background: #635BFF;
+            color: white;
+            padding: 1.2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-stripe:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(99, 91, 255, 0.3);
+        }
+        .btn-paypal {
+            background: #FFC439;
+            color: #003087;
+            padding: 1.2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-paypal:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(255, 196, 57, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">Al Nostro Social Video Pipeline (SVP)</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="user_guide.html">User Guide</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <a href="subscribe.html" class="nav-cta active">Get Started</a>
+    </nav>
+
+    <main>
+        <div class="bg-glow"></div>
+        <div class="container">
+            <div class="page-header animate-up">
+                <img src="Al%20Nostro%20Logo%20Design.png" alt="Al Nostro Logo" style="display: block; margin: 0 auto 1.5rem auto; max-width: 200px; height: auto;">
+                <h1 class="page-title">Start Your <span>Subscription</span></h1>
+                <p class="page-subtitle">Get instant access to the Al Nostro Social Video Pipeline desktop app.</p>
+            </div>
+            
+            <div class="pricing-container animate-up delay-1">
+                <div class="pricing-details">
+                    <h2>SVP Pro License</h2>
+                    <div class="price">$30<span>/ month</span></div>
+                    <div class="trial-badge">Includes 30-Day Free Trial</div>
+                    
+                    <ul class="features-list">
+                        <li>Unlimited video processing and rendering</li>
+                        <li>Automated YouTube Shorts, TikTok & Reels formatting</li>
+                        <li>Advanced Auto-Cut and Silence Removal</li>
+                        <li>Priority customer support</li>
+                        <li>Free updates to all future versions</li>
+                    </ul>
+                </div>
+
+                <div class="payment-buttons">
+                    <a href="https://buy.stripe.com/4gM5kC80rfTu1EhejJd3i00" class="btn-stripe" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M14.7 10.4c-.5-.3-1.4-.6-2.6-.6-1.8 0-3.3.9-3.3 2.6 0 1.6 1.4 2.2 2.9 2.7 1.2.4 1.8.8 1.8 1.5 0 .8-.8 1.4-2.1 1.4-1.5 0-2.8-.5-3.8-1.1l-.8 3.7c1.3.6 2.8 1 4.5 1 2.3 0 4-1.2 4-2.9 0-1.8-1.5-2.3-3.1-2.9-1.2-.4-1.6-.7-1.6-1.3 0-.6.7-1.1 1.8-1.1 1.2 0 2.4.4 3.4.9l.9-3.9z"/></svg>
+                        Subscribe with Credit or Debit Card
+                    </a>
+
+                    <!-- PayPal Smart Button -->
+                    <div id="paypal-button-container-P-0H023695JF651083CNKJSNZQ"></div>
+                    <script src="https://www.paypal.com/sdk/js?client-id=BAAUdvtFYfxxPK5LZ5H7HyVGcbBgcLIQzb6xQ98VGKNNM173m0j9_rK5wKzvPDkYnPoslNCqpnJTtX8ZWA&vault=true&intent=subscription&disable-funding=card" data-sdk-integration-source="button-factory"></script>
+                    <script>
+                      paypal.Buttons({
+                          style: {
+                              shape: 'rect',
+                              color: 'gold',
+                              layout: 'vertical',
+                              label: 'subscribe'
+                          },
+                          createSubscription: function(data, actions) {
+                            return actions.subscription.create({
+                              /* Creates the subscription */
+                              plan_id: 'P-0H023695JF651083CNKJSNZQ'
+                            });
+                          },
+                          onApprove: function(data, actions) {
+                            // The payment succeeded! Our WordPress webhook will handle the rest in the background.
+                            alert('Thank you for subscribing! Check your email for your temporary password and download link.');
+                          }
+                      }).render('#paypal-button-container-P-0H023695JF651083CNKJSNZQ'); // Renders the PayPal button
+                    </script>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
